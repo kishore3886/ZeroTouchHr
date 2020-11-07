@@ -16,5 +16,7 @@ namespace books.Models
         public string LName { get; set; }
 
         public string PhoneNumber { get; set; }
+
+        public string title { get; set; }
     }
 }
