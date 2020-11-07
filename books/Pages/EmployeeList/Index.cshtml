@@ -1,0 +1,96 @@
+﻿@page
+@model books.Pages.EmployeeList.IndexModel
+@{
+    ViewData["Title"] = "EmployeeIndex";
+
+}
+
+<br />
+
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class=" text-info"> Employee List</h2>
+
+    </div>
+    <div class="col-3">
+
+        <a asp-page="Create" class="btn btn- btn-outline-info form-control " > Add Employee</a>
+
+    </div>
+
+
+    <div class="col-12 border p-3 mt-3">
+        <form action="/" method="post">
+            @if (Model.employees.Count() > 0)
+            {
+
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>
+                            <label asp-for="employees.FirstOrDefault().FName"></label>
+                        </th>
+                        <th>
+                            <label asp-for="employees.FirstOrDefault().LName"></label>
+                        </th>
+                        <th>
+                            <label asp-for="employees.FirstOrDefault().PhoneNumber"></label>
+                        </th>
+                        <th>
+                            <label> Action </label>
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model.employees)
+                    {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(m => item.FName)
+
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(m => item.LName)
+
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(m => item.PhoneNumber)
+
+                    </td>
+                    <td>
+
+                        <button class="btn btn-outline-danger btn-sm ">
+                            Delete
+
+                        </button>
+                        <a asp-page="Edit" asp-route-id="@item.id" class="btn btn-outline-success btn-sm"> Edit</a>
+
+                    </td>
+
+                </tr>
+
+
+                    }
+
+
+
+                </table>
+
+            }
+            else
+            {
+
+                <p>No employees at this moment. </p>
+            }
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
