@@ -36,6 +36,9 @@
                             <label asp-for="employees.FirstOrDefault().PhoneNumber"></label>
                         </th>
                         <th>
+                            <label asp-for="employees.FirstOrDefault().Status"></label>
+                        </th>
+                        <th>
                             <label> Action </label>
                         </th>
                     </tr>
@@ -58,6 +61,11 @@
 
                     <td>
                         @Html.DisplayFor(m => item.PhoneNumber)
+
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(m => item.Status)
 
                     </td>
                     <td>

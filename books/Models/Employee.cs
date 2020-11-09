@@ -18,5 +18,19 @@ namespace books.Models
         public string PhoneNumber { get; set; }
 
         public string title { get; set; }
+
+        public string AddressLine1 { get; set; }
+        public string AddressLine2 { get; set; }
+
+        public string City { get; set; }
+
+        public string State { get; set; }
+        public string Zip { get; set; }
+        [Required]
+        public string Email { get; set; }
+        [Required]
+        public string Password { get; set; }
+
+        public string Status { get; set; }
     }
 }

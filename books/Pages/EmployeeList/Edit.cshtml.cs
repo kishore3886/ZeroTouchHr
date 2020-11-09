@@ -37,7 +37,20 @@ namespace books.Pages.EmployeeList
 
                 EmpFromDb.FName = employee.FName;
                 EmpFromDb.LName = employee.LName;
+                EmpFromDb.title = employee.title;
+                EmpFromDb.AddressLine1 = employee.AddressLine1;
+                EmpFromDb.AddressLine2 = employee.AddressLine2;
                 EmpFromDb.PhoneNumber = employee.PhoneNumber;
+                EmpFromDb.State = employee.State;
+                EmpFromDb.City = employee.City;
+                EmpFromDb.Zip = employee.Zip;
+                EmpFromDb.Email = employee.Email;
+                EmpFromDb.Password = employee.Password;
+                EmpFromDb.Status = "Started";
+                //employee.Status = "Started";
+                //await _db.employee.AddAsync(employee);
+                //await _db.SaveChangesAsync();
+                //return RedirectToPage("Index");
                 await _db.SaveChangesAsync();
                 return RedirectToPage("Index");
             }

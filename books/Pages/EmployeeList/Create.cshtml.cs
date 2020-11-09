@@ -30,7 +30,7 @@ namespace books.Pages.EmployeeList
         {
             if(ModelState.IsValid)
             {
-                
+                employee.Status = "Started";
                 await _db.employee.AddAsync(employee);
                 await _db.SaveChangesAsync();
                 return RedirectToPage("Index");

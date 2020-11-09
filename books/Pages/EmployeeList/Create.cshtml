@@ -10,61 +10,131 @@
 <br />
 
 <div class="border container" style="padding:30px">
-    <form  method="post">
+    <form method="post">
 
         <div class="text-danger" asp-validation-summary="ModelOnly"></div>
-        <div class="form-group row">
 
-            <div class="col-3">
-                <label asp-for="employee.FName"></label>
+        <div class="border container" style="padding:40px">
+
+
+            <div class="form-group row">
+
+                <div class="col-md-5">
+
+                    <label for="First Name">First Name</label>
+                    <input asp-for="employee.FName" class="form-control" placeholder="Enter First Name" />
+                    <span asp-validation-for="employee.FName" class="text-danger"></span>
+
+                </div>
+
+                <div class="col-md-5">
+
+                    <label for="First Name">Last Name</label>
+                    <input asp-for="employee.LName" class="form-control" placeholder="Enter Last Name" />
+                    <span asp-validation-for="employee.LName" class="text-danger"></span>
+
+                </div>
+
+                <div class="col-md-2">
+
+                    <label for="First Name">Title</label>
+                    <input asp-for="employee.title" class="form-control" placeholder="Male/Female/Other" />
+                    <span asp-validation-for="employee.LName" class="text-danger"></span>
+
+                </div>
 
             </div>
-            <div class="col-6">
 
-                <input asp-for="employee.FName" class="form-control" placeholder="Enter First Name" />
+            <div class="form-group row">
+                <div class="col-md-12">
+
+                    <label for="First Name">Address Line1</label>
+                    <input asp-for="employee.AddressLine1" class="form-control" placeholder="Enter Address Line1" />
+                    <span asp-validation-for="employee.AddressLine1" class="text-danger"></span>
+                </div>
+
+
             </div>
-            <span asp-validation-for="employee.FName" class="text-danger"></span>
+            <div class="form-group row">
+                <div class="col-md-6">
+
+                    <label for="Address Line 2">Address Line2</label>
+                    <input asp-for="employee.AddressLine2" class="form-control" placeholder="Enter Address Line2" />
+                    <span asp-validation-for="employee.AddressLine2" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6">
+
+                    <label for="Phone Number">Phone Number</label>
+                    <input asp-for="employee.PhoneNumber" class="form-control" placeholder="Enter Phone Number" />
+                    <span asp-validation-for="employee.PhoneNumber" class="text-danger"></span>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <div class="col-md-5">
+
+                    <label for="City">City</label>
+                    <input asp-for="employee.City" class="form-control" placeholder="Enter City Name" />
+                    <span asp-validation-for="employee.City" class="text-danger"></span>
+
+                </div>
+
+                <div class="col-md-5">
+
+                    <label for="State">State</label>
+                    <input asp-for="employee.State" class="form-control" placeholder="Enter State Name" />
+                    <span asp-validation-for="employee.State" class="text-danger"></span>
+
+                </div>
+
+                <div class="col-md-2">
+
+                    <label for="Zip Code">Zip</label>
+                    <input asp-for="employee.Zip" class="form-control" placeholder="Zip Code" />
+                    <span asp-validation-for="employee.Zip" class="text-danger"></span>
+
+                </div>
+
+            </div>
         </div>
+        <div class="border container" style="padding:40px">
 
-        <div class="form-group row">
+            <div class="form-group row">
+                <div class="col-md-6">
 
-            <div class="col-3">
-                <label asp-for="employee.LName"></label>
+                    <label for="User Name/ User Email">User Name/ User Email</label>
+                    <input asp-for="employee.Email" class="form-control" placeholder="Enter User email/name" />
+                    <span asp-validation-for="employee.Email" class="text-danger"></span>
+                </div>
 
-            </div>
-            <div class="col-6">
+                <div class="col-md-6">
 
-                <input asp-for="employee.LName" class="form-control" placeholder="Enter Last Name" />
-            </div>
-            <span asp-validation-for="employee.LName" class="text-danger"></span>
+                    <label for="Password">Password</label>
+                    <input asp-for="employee.Password" class="form-control" placeholder="Create Password" />
+                    <span asp-validation-for="employee.Password" class="text-danger"></span>
+                </div>
 
-        </div>
-
-        <div class="form-group row">
-
-            <div class="col-3">
-                <label asp-for="employee.PhoneNumber"></label>
 
             </div>
-            <div class="col-6">
+         </div>   
+        <br>
+            <div class="form-group row ">
 
-                <input asp-for="employee.PhoneNumber" class="form-control" placeholder="Enter Phone Number" />
+                <div class="col-3 offset-3">
+                    <input type="submit" value="create" class="btn btn-lg btn-outline-success" />
+                </div>
+                <div class="col-3">
+
+                    <a asp-page="Index" class="btn btn-lg btn-outline-info">Back To List</a>
+                </div>
+
             </div>
-            <span asp-validation-for="employee.PhoneNumber" class="text-danger"></span>
-
-        </div>
-
-        <div class="form-group row">
-
-            <div class="col-3 offset-3">
-                <input type="submit"  value="create" class="btn btn-outline-success" />
-            </div>
-            <div class="col-3">
-
-                <a asp-page="Index" class="btn btn-outline-info">Back To List</a>
-            </div>
-
-        </div>
 
     </form>
 </div>

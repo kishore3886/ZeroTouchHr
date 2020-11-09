@@ -5,7 +5,59 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <p> this is a new update </p>
+    <h1 class="display-4">Welcome To Zero Touch HR</h1>
+
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <div class="card">
+                <div class="card-header">
+                    Started
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Onboarding Process started for </h5>
+                    <p class="card-text"><h1>@ViewData["StartedCount"]</h1>  </p>
+                    <a asp-page="EmployeeList/Index" class="btn btn-lg btn-outline-info">Click To See </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card">
+                <div class="card-header">
+                    In Process
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Onboarding Process is in progress for </h5>
+                    <p class="card-text"><h2>@ViewData["InprocessCount"]</h2>  </p>
+                    <a asp-page="EmployeeList/Index" class="btn btn-outline-warning">Click To See </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card">
+                <div class="card-header">
+                    Completed
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Onboarding Process completed for</h5>
+                    <p class="card-text"><h2>@ViewData["CompletedCount"]</h2>  </p>
+                    <a asp-page="EmployeeList/Index" class="btn btn-outline-success">Click To See </a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
 </div>

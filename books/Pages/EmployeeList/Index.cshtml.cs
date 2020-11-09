@@ -22,7 +22,7 @@ namespace books.Pages.EmployeeList
         public IEnumerable<Employee> employees { get; set; }
         public async Task OnGet()
         {
-            employees = await _db.employee.ToListAsync();
+            employees = await _db.employee.Where(e=>e.Status=="Started").ToListAsync();
         }
     }
 }
